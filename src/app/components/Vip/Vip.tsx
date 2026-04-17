@@ -1,4 +1,3 @@
-import Link from "next/link";
 import style from "./vip.module.css";
 
 export function Vip() {

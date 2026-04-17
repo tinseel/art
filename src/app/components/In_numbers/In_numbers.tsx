@@ -5,23 +5,18 @@ import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import style from "./In_numbers.module.css";
 
-// Вспомогательный компонент для анимации карточки
 function TiltCard({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
 
-  // Значения положения мыши
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  // Плавность движений
   const mouseXSpring = useSpring(x);
   const mouseYSpring = useSpring(y);
 
-  // Трансформация в наклон (градусы)
   const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
 
-  // Эффект блика: меняем положение градиента
   const glareX = useTransform(mouseXSpring, [-0.5, 0.5], ["0%", "100%"]);
   const glareY = useTransform(mouseYSpring, [-0.5, 0.5], ["0%", "100%"]);
   const glareOpacity = useTransform(mouseXSpring, [-0.5, -0.2, 0.2, 0.5], [0.4, 0, 0, 0.4]);
@@ -57,7 +52,7 @@ function TiltCard({ children }: { children: React.ReactNode }) {
       }}
       className={style.page_numbers}
     >
-      {/* Слой блика */}
+      
       <motion.div 
       className={style.line}
         style={{
@@ -71,14 +66,9 @@ function TiltCard({ children }: { children: React.ReactNode }) {
           zIndex: 1,
           pointerEvents: "none",
           borderRadius: "inherit",
-          //@ts-ignore
-          "--glare-x": glareX,
-          //@ts-ignore
-          "--glare-y": glareY,
         }}
       />
 
-      {/* Контент карточки */}
       <div style={{ transform: "translateZ(40px)", position: "relative", zIndex: 2}}>
         {children}
       </div>
@@ -86,7 +76,6 @@ function TiltCard({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Основной компонент
 export function In_numbers() {
   const data = [
     { p: "3000+", span: "Студентов" },
