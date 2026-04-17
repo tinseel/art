@@ -1,0 +1,75 @@
+html[data-theme=dark] {
+  /* Surface */
+  --backgroundPrimary:     rgb(24, 28, 34);
+  --backgroundSecondary:   rgb(32, 36, 43);
+  --backgroundSecondaryH:  rgba(34, 38, 45);
+  --backgroundTertiary:    rgb(40, 46, 53);
+  --backgroundQuaternary:  rgb(48, 54, 63);
+  --backgroundQuaternaryH:  rgb(56, 62, 71);
+  
+  /* Foreground */
+  --foregroundPrimary: rgb(206, 231, 255);
+  --foregroundSecondary: rgb(164, 184, 202);
+  --foregroundTertiary: rgb(76, 86, 94);
+  --foregroundInverted: rgb(43, 49, 54);
+
+  /*Inputs*/
+  --surface-input-place: rgba(168, 190, 208, 0.38);
+
+  --surface-input: rgba(18, 22, 28, 1);
+  --surface-input-hover: rgba(17, 21, 28, 0.5);
+  --surface-input-focus: rgba(27, 33, 43, 1);
+
+  --border-input: rgba(255, 255, 255, 0.06);
+  --border-input-hover: rgba(255,255,255,0.08);
+
+  /* Constants */
+  --constantBlack: #000000;
+  --constantWhite: #ffffff;
+
+  /* Utility */
+  --contrast-beta: #9cb0c2;;
+  --high-beta: #2d3138;
+
+  --borderPrimary: rgba(255, 255, 255, 0.02);
+  --borderPrimaryHover: rgba(255, 255, 255, 0.08);
+  
+  /* Accents */
+  --accentBlue: rgb(47, 147, 218);
+  --accentBlueHover: rgb(47, 147, 218, .8);
+
+  --accentGreen: rgb(54, 194, 125);
+  --accentGreenHover: rgb(54, 194, 125, .1);
+
+  --accentRed: rgb(242, 72, 101);
+  --accentRedHover: rgb(242, 72, 101, .1);
+
+  --accentOrange: rgb(238, 161, 58);
+  --accentOrangeHover: rgb(238, 161, 58, .1);
+
+  --accentOrangeStrong: #fa622f;
+  --accentYellow: #f5c451;
+  --accentPurple: #8f32e6;
+  --accentMist: #14F195;
+
+  --accentLightRed: rgba(243, 54, 54, 0.15);
+  --accentLightRedH: rgba(243, 54, 54, 0.20);
+
+  /* Separators */
+  --separatorCommonCard: rgba(60, 60, 60, 0.2);
+  --separatorCommon: rgba(190, 220, 250, 0.08);
+  --hover: rgba(80, 80, 80, 0.04);
+
+  /* Overlay */
+  --overlayModal: rgba(0, 0, 0, 0.55);         
+
+  /* Gradients */
+  --titleLinearColor: linear-gradient(91deg,#8bbaff 5%,#2b47d4 28%);
+  --shadowGradient: linear-gradient(270deg,#1b2431 42%,hsla(0, 0%, 100%, 0));
+  --background-theme: linear-gradient(140deg,rgb(14, 16, 18) 6%,rgb(28, 30, 36) 104%);
+  --background-header: rgba(16, 20, 24, 0.6);
+
+  --fontfamily: system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+

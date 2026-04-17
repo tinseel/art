@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1300px;
+  padding: clamp(30px, 2.2vw, 50px);
+  border-radius: 10px;
+  background-color: var(--backgroundSecondary);
+  border: 1px solid var(--separatorCommon);
+
+  h1 {
+    text-align: center;
+    font-size: clamp(30px, 2.2vw, 42px);
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--foregroundPrimary);
+
+    span {
+      color: var(--accentOrange);
+    }
+  }
+}
+
+.title_text {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: bold;
+
+    span {
+      color: var(--accentMist);
+    }
+  }
+}

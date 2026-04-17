@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid var(--separatorCommon);
+  margin-top: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  padding: 20px;
+
+  @media (max-width: 940px) {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .page_left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .logo {
+      font-weight: bold;
+      font-size: 38px;
+
+      .start {
+        color: var(--accentGreen);
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      font-size: clamp(14px, 1.2vw, 16px);;
+
+      :last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .page_right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @media (max-width: 940px) {
+      margin-top: clamp(16px, 1.2vw, 20px);
+    }
+
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+
+      @media (max-width: 940px) {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .number,.email {
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(16px, 1.2vw, 22px);
+        color: var(--constantWhite);
+
+        a {
+          color: var(--constantWhite);
+        }
+
+        :first-child {
+          color: var(--contrast-beta);
+          font-size: clamp(14px, 1.2vw, 16px);
+        }
+        :last-child {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: clamp(32px, 2.2vw, 72px);
+
+      .bnt {
+        display: flex;
+        align-items: center;
+        padding: clamp(6px, 1.2vw, 10px) clamp(44px, 2.2vw, 64px);
+        font-size: clamp(16px, 1.2vw, 18px);
+        border-radius: 10px;
+        color: var(--constantWhite);
+        background-color: var(--accentBlue);
+        user-select: none;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          border-radius: 8px;
+          background-color: var(--accentBlueHover);
+        }
+      }
+
+      .links_social {
+        display: flex;
+        gap: clamp(10px, 1.2vw, 12px);
+
+        a {
+          display: flex;
+          padding: 10px 10px;
+          font-size: 18px;
+          border-radius: 10px;
+          color: var(--constantWhite);
+          background-color: var(--accentOrange);
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            border-radius: 8px;
+            opacity: .8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(12px, 1.2vw, 16px);;
+  gap: clamp(4px, 1.2vw, 6px);
+}
